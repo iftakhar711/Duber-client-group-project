@@ -1,0 +1,223 @@
+.deliveringAnimationButton::before {
+  content: "";
+  position: absolute;
+  width: 52%;
+  height: 1px;
+  background: #cecdcd;
+  bottom: 30px;
+  left: 43px;
+}
+
+.deliveringAnimationButton::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #cecdcd;
+  bottom: 30px;
+  left: 43px;
+  transition: all ease-in 0.4s;
+}
+
+.deliveringAnimationButton:hover:after {
+  width: 52%;
+  background: black;
+}
+
+.ownRestaurantButtonAnimation::before {
+  content: "";
+  position: absolute;
+  width: 52%;
+  height: 1px;
+  background: #cecdcd;
+  bottom: 44px;
+}
+
+.ownRestaurantButtonAnimation::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  background: #cecdcd;
+  bottom: 44px;
+  transition: all ease-in 0.4s;
+  left: 200px;
+}
+
+.ownRestaurantButtonAnimation:hover:after {
+  width: 52%;
+  background: black;
+}
+
+.pickupLocation::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 20px;
+  border: 1px solid black;
+  top: 21px;
+  border-radius: 100%;
+}
+
+.destinationInput::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: 20px;
+  border: 1px solid black;
+  top: 21px;
+}
+
+.destinationInput::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 48px;
+  left: 23px;
+  top: -31px;
+  background: black;
+}
+
+.driveOrDeliverAnimation::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 5px;
+  background: #090909;
+  border-radius: 10px;
+  bottom: 0;
+  left: 70px;
+}
+
+.eatBottomAnimation::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  background: #090909;
+  border-radius: 10px;
+  bottom: 0;
+  left: 254px;
+}
+
+.rideBottomAnimation::after {
+  content: "";
+  position: absolute;
+  width: 70px;
+  height: 5px;
+  background: #090909;
+  border-radius: 10px;
+  bottom: 0;
+  right: 73px;
+}
+
+@media only screen and (max-width: 1024px) {
+  .deliveringAnimationButton::before {
+    width: 295px;
+    left: 16px;
+  }
+
+  .deliveringAnimationButton::after {
+    left: 16px;
+  }
+
+  .deliveringAnimationButton:hover:after {
+    width: 295px;
+  }
+
+  .ownRestaurantButtonAnimation::before {
+    width: 300px;
+    bottom: 46px;
+  }
+
+  .ownRestaurantButtonAnimation::after {
+    left: 157px;
+    bottom: 46px;
+  }
+
+  .ownRestaurantButtonAnimation:hover:after {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .driveOrDeliverAnimation::after {
+    left: 21px;
+  }
+
+  .eatBottomAnimation::after {
+    left: 144px;
+  }
+
+  .rideBottomAnimation::after {
+    right: 402px;
+  }
+}
+
+@media only screen and (max-width: 639px) {
+  .deliveringAnimationButton::before {
+    width: 272px;
+  }
+
+  .deliveringAnimationButton:hover:after {
+    width: 272px;
+  }
+
+  .ownRestaurantButtonAnimation::before {
+    width: 278px;
+  }
+
+  .ownRestaurantButtonAnimation:hover:after {
+    width: 278px;
+  }
+
+  .ownRestaurantButtonAnimation {
+    margin-top: 20px;
+    display: block;
+  }
+
+  .ownRestaurantButtonAnimation::before {
+    bottom: 38px;
+  }
+
+  .ownRestaurantButtonAnimation::after {
+    left: 16px;
+    bottom: 38px;
+  }
+}
+
+@media only screen and (max-width: 416px) {
+  .driveOrDeliverAnimation::after {
+    left: 18px;
+  }
+
+  .eatBottomAnimation::after {
+    left: 173px;
+  }
+
+  .rideBottomAnimation::after {
+    right: 46px;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .eatBottomAnimation::after {
+    left: 163px;
+  }
+
+  .rideBottomAnimation::after {
+    right: 42px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .eatBottomAnimation::after {
+    left: 128px;
+  }
+
+  .rideBottomAnimation::after {
+    right: 31px;
+  }
+}

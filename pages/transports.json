@@ -1,0 +1,68 @@
+[
+    {
+        "id": 1,
+        "vheiclename": "yamaha",
+        "img": "https://i.ibb.co/hfhm6Jm/vehicle.png",
+        "transport": "car",
+        "seat": 10,
+        "from": "dkaka",
+        "destination": "chittagong",
+        "cost": 5000,
+        "numberplate": 12345
+    },
+    {
+        "id": 2,
+        "vheiclename": "shuzuki",
+        "img": "https://i.ibb.co/hfhm6Jm/vehicle.png",
+        "transport": "bike",
+        "seat": 2,
+        "from": "dkaka",
+        "destination": "comilla",
+        "cost": 3000,
+        "numberplate": 54321
+    },
+    {
+        "id": 3,
+        "vheiclename": "toyota",
+        "img": "https://i.ibb.co/hfhm6Jm/vehicle.png",
+        "transport": "car",
+        "seat": 4,
+        "from": "dkaka",
+        "destination": "kisorgonj",
+        "cost": 8000,
+        "numberplate": 23456
+    },
+    {
+        "id": 4,
+        "vheiclename": "dreamline",
+        "img": "https://i.ibb.co/njWZK4f/gleb-lukomets-FYs-PAVwxekc-unsplash.jpg",
+        "transport": "bus",
+        "seat": 50,
+        "from": "dkaka",
+        "destination": "noakhali",
+        "cost": 15000,
+        "numberplate": 65354
+    },
+    {
+        "id": 5,
+        "vheiclename": "starline",
+        "img": "https://i.ibb.co/njWZK4f/gleb-lukomets-FYs-PAVwxekc-unsplash.jpg",
+        "transport": "bus",
+        "seat": 52,
+        "from": "dkaka",
+        "destination": "feni",
+        "cost": "10000",
+        "numberplate": 566664
+    },
+    {
+        "id": 6,
+        "vheiclename": "yamaha",
+        "img": "https://i.ibb.co/njWZK4f/gleb-lukomets-FYs-PAVwxekc-unsplash.jpg",
+        "transport": "bike",
+        "seat": 2,
+        "from": "mirpur",
+        "destination": "polton",
+        "cost": 500,
+        "numberplate": 21432
+    }
+]
