@@ -1,8 +1,11 @@
-import React from 'react';
+import React , {useState} from 'react';
 import {FaEdit} from "react-icons/fa"
 
 
-const dashboardComponents = () => {
+const DashboardComponents = () => {
+
+    const [info, setInfo] = useState("")
+
     return (
         <div className='lg:w-[1000px] w-full mx-auto px-3'>
             <div className="flex flex-col p-6 space-y-4 sm:p-10">
@@ -101,4 +104,4 @@ const dashboardComponents = () => {
     );
 };
 
-export default dashboardComponents;
+export default DashboardComponents;
