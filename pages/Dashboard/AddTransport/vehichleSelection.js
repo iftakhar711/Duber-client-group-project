@@ -36,22 +36,7 @@ const SignupEmailDriveVehichleSelection = () => {
       })
       .catch(error => console.log(error))
   };
-  // submit transport data 
 
-  // const getUrl = (e) => {
-  //   const img = e.target.files[0]
-  //   const formData = new FormData();
-  //   formData.append("image", img);
-
-  //   fetch(`https://api.imgbb.com/1/upload?key=73adcb71f1df263fc9562299dd50904b`, {
-  //     method: "POST",
-  //     body: formData
-  //   })
-  //     .then(res => res.json())
-  //     .then(data => dispatch(transportImg(data.data.url)))
-  //     .catch(error => console.log(error))
-  // };
-  // upload image and get online link 
   return (
     <div className="md:w-[550px] w-full mx-auto">
       <div className="shadow-lg border p-3 rounded-md">
@@ -63,7 +48,7 @@ const SignupEmailDriveVehichleSelection = () => {
         </div>
         <form onSubmit={(e) => handelSubmt(e)}>
           <div className="py-4">
-            <label className="text-lg font-medium pb-2 block">Vehicle Name</label>
+            <label className="text-lg font-medium pb-2 block">Company Name</label>
             <input
               onChange={(e) => dispatch(vehicleName(e.target.value))}
               placeholder='Vehicle Name'

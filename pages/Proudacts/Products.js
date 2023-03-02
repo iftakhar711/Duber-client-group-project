@@ -8,7 +8,6 @@ import Product from './Product';
 const Products = () => {
     const [location, setLocation] = useState("")
     const [destination, setDestination] = useState("")
-    const [search, setSearch] = useState("")
     const [product, setProduct] = useState([]);
 
     const locationRef = useRef(null);
