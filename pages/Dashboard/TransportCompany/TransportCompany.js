@@ -1,39 +1,68 @@
 import React from 'react';
+import { MdOutlineEmojiTransportation } from 'react-icons/md';
 import Dashboard from '../Dasboard/Dasboard';
 
 const TransportCompany = () => {
     return (
-        <div className=" p-2 w-full  sm:p-4 dark:text-gray-100">
-            <h2 className="mb-4 text-2xl font-semibold leading-tight">Company</h2>
-            <div >
-                <table className="min-w-full text-xs">
+        <div className="grid mx-auto px-4 sm:px-8">
+            <div className="py-8">
+                <div>
+                    <h2 className="text-2xl font-semibold leading-tight">Company Information</h2>
+                </div>
+                <div className="-mx-4 sm:-mx-8  sm:px-8 py-4 overflow-x-auto">
+                    <div
+                        className="inline-block w-full shadow-md rounded-lg overflow-hidden"
+                    >
 
-                    <thead className="dark:bg-gray-700 justify-evenly">
-                        <tr className="text-left">
-                            <th className="p-3">Name</th>
-                            <th className="p-3">Email Address</th>
-                            <th className="p-3">Verify</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr className="border-b border-opacity-20 dark:border-gray-700 dark:bg-gray-900">
+                        <table className="w-full grid  leading-normal">
+                            <thead>
+                                <tr>
+                                    <th
+                                        className="lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                                    >
+                                        ID
+                                    </th>
+                                    <th
+                                        className=" lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                                    >
+                                        Name
+                                    </th>
+                                    <th
+                                        className="lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                                    >
+                                        Email
+                                    </th>
+                                    <th
+                                        className="lg:px-12 md:px-8 px-3 py-3 border-b-2  border-gray-200 bg-gray-100  text-lg font-semibold text-gray-700 uppercase tracking-wider"
+                                    >
+                                        <MdOutlineEmojiTransportation></MdOutlineEmojiTransportation>
+                                    </th>
+                                    <th
+                                        className="lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                                    >
+                                        Admin
+                                    </th>
+                                    <th
+                                        className="lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100  text-xs font-semibold text-gray-700 uppercase tracking-wider"
+                                    >
+                                        Verify
+                                    </th>
 
-                            {/* {users?.map(data =>
-								<td className="p-3">
-									<p>{users.name}</p>
-								</td>
-								<td className="p-3">
-									<p>{users.email}</p>
-								</td>
-								 
-						<td> className='px-4 py-2 font-semibold rounded-md bg-gray-900 hover:bg-gray-700 hover:text-white text-gray-100'>Verify</button>}</td>
-							} */}
-                        </tr>
+                                </tr>
+                            </thead>
+                            <tbody>
 
-                    </tbody>
-                </table>
-            </div >
-        </div >
+
+                            </tbody>
+                        </table>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     );
 };
 
