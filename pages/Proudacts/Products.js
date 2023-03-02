@@ -1,21 +1,15 @@
 import React, { useEffect, useRef, useState } from 'react';
-// import { AiOutlineFileSearch } from 'react-icons/ai';
 import { GrFormClose } from 'react-icons/gr';
 import { TiLocationArrow } from 'react-icons/ti';
-// import { FcSearch } from 'react-icons/fc';
 import styles from "./Products.module.css"
-// import { IoCarSportOutline } from 'react-icons/io5';
 import Image from 'next/image';
-// import { useQuery } from '@tanstack/react-query';
-import tranport from '../transports.json'
 import Product from './Product';
 
 const Products = () => {
     const [location, setLocation] = useState("")
     const [destination, setDestination] = useState("")
     const [search, setSearch] = useState("")
-    // const [data, setData] = useState(null)
-    // console.log(data);
+    const [product, setProduct] = useState([]);
 
     const locationRef = useRef(null);
     const locationOnButtonClick = () => {
@@ -28,21 +22,11 @@ const Products = () => {
 
     };
 
-    // useEffect(() => {
-    //     fetch(tranport)
-    //         .then(res => res.json())
-    //         .then(data => console.log(data))
-    // }, []);
-    // const url = 'Products.json'
-    // const { data: Product = [] } = useQuery({
-    //     queryKey: ['Product', Product],
-    //     queryFn: async () => {
-    //         const res = await fetch(url);
-    //         const data = await res.json();
-    //         return data;
-    //     }
-    // });
-    // console.log(data);
+    useEffect(() => {
+        fetch(`http://localhost:5000/alltransport?location=${location}&destination=${destination}`)
+            .then(res => res.json())
+            .then(data => setProduct(data))
+    }, [location, destination]);
 
     return (
         <>
@@ -128,26 +112,10 @@ const Products = () => {
                 </div>
             </div>
 
-            {/* <div className="mx-auto mb-6 max-w-lg grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2">
-                <form action="" className="relative mx-auto w-max">
-                    <input type="search"
-                        onChange={(e) => setSearch(e.target.value)}
-                        className="peer cursor-pointer relative z-10 h-12  rounded-full border bg-transparent  outline-none w-full focus:cursor-text border-[#120c5c] pl-16 pr-4" />
-                    <AiOutlineFileSearch className='absolute inset-y-0 my-auto h-8 w-12 border-r border-transparent stroke-gray-500 px-3.5 peer-focus:border-lime-300 peer-focus:stroke-lime-500'></AiOutlineFileSearch>
-                </form>
-                <button className="mx-auto relative mb-6 md:mb-0 lg:mb-0 group overflow-hidden px-6 w-28 h-12 rounded-full flex space-x-2 items-center bg-gradient-to-r bg-[#120c5c] hover:to-purple-600">
-                    <span className="relative text-sm text-white">Search</span>
-                    <div className="flex items-center -space-x-3 translate-x-3">
-                        <FcSearch className='h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0'></FcSearch>
-                    </div>
-                </button>
-            </div> */}
-
             <div className=' bg-slate-200 mt-10 mb-10 p-10 '>
 
                 <div className="grid lg:max-w-7xl   gap-4 md:grid-cols-2 lg:grid-cols-3 mx-auto">
-                    {tranport?.map(data => <Product data={data}></Product>)}
-
+                    {product?.map(data => <Product data={data} key={data._id}></Product>)}
                 </div>
                 <button className="mt-8 w-48 grid mx-auto rounded-lg bg-[#1c1470] p-3 text-sm font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2">See More</button>
             </div>
