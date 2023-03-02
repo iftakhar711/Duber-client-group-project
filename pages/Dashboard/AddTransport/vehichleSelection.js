@@ -1,5 +1,6 @@
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { toast } from "react-hot-toast";
 import Dashboard from "../Dasboard/Dasboard";
 
 const SignupEmailDriveVehichleSelection = () => {
@@ -11,6 +12,44 @@ const SignupEmailDriveVehichleSelection = () => {
   const [numberPlate, setNumberPlate] = useState("")
   const [destination, setDestination] = useState("")
   const [cost, setCost] = useState("")
+  const [loading, setLoading] = useState(false)
+
+
+  const vehiclesData = {
+    transport: vehicle,
+    companyName: vehicleName,
+    seatPlan: seatPlan,
+    cost: cost,
+    numberPlate: numberPlate,
+    from: fromYouLocation,
+    to: destination,
+    image: imgUrl
+  }
+
+  const handleSubmit = (e) => {
+    setLoading(true)
+    e.preventDefault()
+    const form = e.target;
+    fetch("http://localhost:5000/add-transport", {
+      method: "POST",
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(vehiclesData)
+    })
+      .then(res => res.json())
+      .then(data => {
+        toast.success("Successfully Vehicles Added");
+        form.reset();
+        console.log(data)
+        setLoading(false)
+      })
+      .catch(error => {
+        toast.error(error.message)
+        setLoading(false)
+      })
+  }
+
 
   return (
     <div className="md:w-[550px] w-full mx-auto">
@@ -27,10 +66,10 @@ const SignupEmailDriveVehichleSelection = () => {
         <div>
           <h2 className="text-[24px] mb-4 mt-3 font-semibold">Enter your vehicle information</h2>
         </div>
-        <form>
+        <form onSubmit={handleSubmit}>
 
           <div className="py-4">
-            <label className="text-lg font-medium pb-2 block">Vehicle Name</label>
+            <label className="text-lg font-medium pb-2 block">Company Name</label>
             <input
               onChange={(e) => setVehicleName(e.target.value)}
               placeholder='Vehicle Name'
@@ -133,7 +172,7 @@ const SignupEmailDriveVehichleSelection = () => {
             <button
               disabled={!(vehicle.length && seatPlan.length && fromYouLocation.length && numberPlate.length && destination.length && cost.length && imgUrl.length && vehicleName.length)}
               className={`${vehicle.length && seatPlan.length && fromYouLocation.length && numberPlate.length && destination.length && cost.length && imgUrl.length && vehicleName.length ? "bg-gray-900 hover:bg-gray-800 transition ease-in-out duration-500 text-gray-100" : "bg-gray-200 text-gray-500 cursor-not-allowed"} w-full px-4 py-3 text-center rounded-md font-medium`}
-              type="submit">Continue</button>
+              type="submit">{loading ? "Loading..." : "Continue"}</button>
           </div>
 
         </form>

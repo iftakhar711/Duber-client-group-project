@@ -53,9 +53,9 @@ const Dashboard = ({ children }) => {
                     </li>
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <VscGitPullRequestCreate className=" w-5 h-5"></VscGitPullRequestCreate>
-                        <span className={`${!open && "hidden"} origin-left duration-200`}>
+                        <Link href='/dashboardComponents' className={`${!open && "hidden"} origin-left duration-200`}>
                             Company Req
-                        </span>
+                        </Link>
                     </li>
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <RxAvatar className=" w-5 h-5"></RxAvatar>
