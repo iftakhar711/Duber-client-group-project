@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import React from 'react';
-import { FaMoneyBillAlt, FaRegMoneyBillAlt } from 'react-icons/fa';
-import { IoCarSportOutline } from 'react-icons/io5';
+import { FaMoneyBillAlt } from 'react-icons/fa';
 import { MdAirlineSeatReclineNormal } from 'react-icons/md';
 import { TbLocation } from 'react-icons/tb';
 
@@ -19,18 +18,18 @@ const Product = ({ data }) => {
             </div>
 
             <div className="flex flex-col items-center gap-6 p-8">
-                <h3 className=" text-sm md:text-[16px] lg:text-2xl  font-bold text-slate-800">{data.vheiclename}</h3>
+                <h3 className=" text-sm md:text-[16px] lg:text-2xl  font-bold text-slate-800">{data?.vehicleName}</h3>
                 <div className='flex gap-3 items-center'>
                     <TbLocation></TbLocation>
-                    <p className=" text-center  text-slate-600">From {data.from} | Destination {data.destination}</p>
+                    <p className=" text-center  text-slate-600">From {data?.from} | Destination {data?.destination}</p>
                 </div>
                 <div className='grid gap-3'>
                     <div className=' flex gap-2 items-center'>
                         <MdAirlineSeatReclineNormal></MdAirlineSeatReclineNormal>
-                        <span className=" text-base font-semibold text-slate-800">{data.seat} seat avaiable.</span>
+                        <span className=" text-base font-semibold text-slate-800">{data?.seatPlan} seat avaiable.</span>
                     </div>
                     <div>
-                        <span className="text-sm font-semibold text-slate-800">Number Plate : {data.numberplate}</span>
+                        <span className="text-sm font-semibold text-slate-800">Number Plate : {data?.numberPlate}</span>
                     </div>
                 </div>
                 <div className="flex w-full items-center justify-center gap-3 rounded-lg bg-slate-50 p-4">
@@ -39,7 +38,7 @@ const Product = ({ data }) => {
                     <FaMoneyBillAlt className='h-6 w-6 fill-slate-500'></FaMoneyBillAlt>
 
                     <div>
-                        <span className="text-sm text-slate-600">{data.cost} Taka</span>
+                        <span className="text-sm text-slate-600">{data?.cost} Taka</span>
                     </div>
 
                 </div>
