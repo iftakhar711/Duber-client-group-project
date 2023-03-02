@@ -21,7 +21,7 @@ const Banner = () => {
           <Image
             fill
             className=" h-[667px] w-full object-cover"
-            src="https://i.ibb.co/Qvtcrf3/ezgif-com-webp-to-jpg.jpg"
+            src="https://i.ibb.co/txBhHyd/Parcelforce-Delivery-Driver-Facebook.jpg"
             alt="Image"
           />
         </div>
@@ -35,7 +35,7 @@ const Banner = () => {
           <Image
             fill
             className="h-[667px] w-full object-cover"
-            src="https://i.ibb.co/wCx1tY2/ezgif-com-webp-to-jpg-1.jpg"
+            src="https://i.ibb.co/XjvZMZC/1-sushi-Getty-Images-1360641847-937afbc3acd54b068c23127f138896b7.jpg"
             alt=""
           />
         </div>
@@ -49,7 +49,7 @@ const Banner = () => {
           <Image
             fill
             className="h-[667px] w-full object-cover"
-            src="https://i.ibb.co/VNhBCZG/ezgif-com-webp-to-jpg-2.jpg"
+            src="https://i.ibb.co/vzrxrRL/MG-0437.jpg"
             alt=""
           />
         </div>
@@ -64,7 +64,7 @@ const Banner = () => {
           <Image
             fill
             className="h-[667px] w-full object-[revert]"
-            src="https://i.ibb.co/Qvtcrf3/ezgif-com-webp-to-jpg.jpg"
+            src="https://i.ibb.co/txBhHyd/Parcelforce-Delivery-Driver-Facebook.jpg"
             alt="Image"
           />
         </div>
@@ -78,7 +78,7 @@ const Banner = () => {
           <Image
             fill
             className="h-[667px] w-full object-cover"
-            src="https://i.ibb.co/wCx1tY2/ezgif-com-webp-to-jpg-1.jpg"
+            src="https://i.ibb.co/XjvZMZC/1-sushi-Getty-Images-1360641847-937afbc3acd54b068c23127f138896b7.jpg"
             alt=""
           />
         </div>
@@ -92,7 +92,7 @@ const Banner = () => {
           <Image
             fill
             className="h-[667px] w-full object-cover"
-            src="https://i.ibb.co/VNhBCZG/ezgif-com-webp-to-jpg-2.jpg"
+            src="https://i.ibb.co/vzrxrRL/MG-0437.jpg"
             alt=""
           />
         </div>
