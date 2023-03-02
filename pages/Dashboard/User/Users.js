@@ -37,15 +37,11 @@ const Users = () => {
 									>
 										<RiUserFollowLine></RiUserFollowLine>
 									</th>
+
 									<th
 										className="lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
 									>
-										Admin
-									</th>
-									<th
-										className="lg:px-12 md:px-8 px-3 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider"
-									>
-										Verify
+										Delete
 									</th>
 
 								</tr>
