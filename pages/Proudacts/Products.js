@@ -74,8 +74,8 @@ const Products = () => {
                         }
                     </div>
                     <div className="lg:mt-8 mt-4">
-                        <button className="px-8 py-3 rounded-lg bg-[#1c1470] text-white hover:bg-[#2a2378] font-medium my-6 mr-4 lg:inline block md:w-auto w-full">Request now</button>
-                        <button className="px-6 py-3 rounded-lg bg-gray-100 text-black hover:bg-gray-200 font-medium my-6 mr-4 lg:inline block md:w-auto w-full">Schedule for later</button>
+                        <button className="px-8 py-3 rounded-lg bg-[#1c1470] text-white hover:bg-[#2a2378] font-medium my-6 mr-4 lg:inline block md:w-auto w-full">Search Ride</button>
+
                     </div>
                 </div>
                 <div>
