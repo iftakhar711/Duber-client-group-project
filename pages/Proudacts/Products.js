@@ -21,6 +21,7 @@ const Products = () => {
 
     };
 
+
     useEffect(() => {
         fetch(`http://localhost:5000/alltransport?location=${location}&destination=${destination}`)
             .then(res => res.json())

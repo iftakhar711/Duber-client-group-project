@@ -1,10 +1,15 @@
-import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaMoneyBillAlt } from 'react-icons/fa';
 import { MdAirlineSeatReclineNormal } from 'react-icons/md';
 import { TbLocation } from 'react-icons/tb';
+import ProductModal from './ProductModal';
 
 const Product = ({ data }) => {
+
+    // Modal
+    const [showModal, setShowModal] = useState(false)
+    const CloseModal = () => setShowModal(false)
+
     return (
         <div className="max-w-md  rounded-xl bg-white shadow-lg">
             <div className="p-8">
@@ -43,8 +48,9 @@ const Product = ({ data }) => {
                     </div>
 
                 </div>
-                <button className="mt-3 w-full rounded-lg bg-[#1c1470] p-3 text-xs lg:text-sm font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2"> Booking</button>
+                <button onClick={() => setShowModal(true)} className="mt-3 w-full rounded-lg bg-[#1c1470] p-3 text-xs lg:text-sm font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2"> Booking</button>
             </div>
+            <ProductModal onClose={CloseModal} data={data} visibel={showModal}></ProductModal>
         </div>
     );
 };
