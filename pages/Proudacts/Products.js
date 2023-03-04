@@ -113,15 +113,11 @@ const Products = () => {
             </div>
 
             <div className=' bg-slate-200 mt-10 mb-10 p-10 '>
-
                 <div className="grid lg:max-w-7xl   gap-4 md:grid-cols-2 lg:grid-cols-3 mx-auto">
                     {product?.map(data => <Product data={data} key={data._id}></Product>)}
                 </div>
                 <button className="mt-8 w-48 grid mx-auto rounded-lg bg-[#1c1470] p-3 text-sm font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2">See More</button>
             </div>
-
-
-
         </>
     )
 };

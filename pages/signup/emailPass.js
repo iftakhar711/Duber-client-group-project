@@ -23,8 +23,7 @@ const EmailPass = () => {
   const handelSignup = () => {
     setLoading(true)
     userRegister(email, password)
-      .then(result => {
-        console.log(result.user);
+      .then(() => {
         userUpdate(fullName)
         setLoading(false)
       })
@@ -37,7 +36,23 @@ const EmailPass = () => {
   const userUpdate = (name) => {
     updateUser(name)
       .then(() => {
-        route.push("/signup/drive/thankyou")
+        const person = {
+          fullName,
+          email,
+          role
+        };
+
+        fetch('http://localhost:5000/adduser', {
+          method: "POST",
+          headers: {
+            'content-type': 'application/json'
+          },
+          body: JSON.stringify(person)
+        })
+          .then(() => {
+            route.push("/signup/drive/thankyou")
+          })
+          .catch(error => console.log(error))
       })
       .catch(error => console.log(error))
   }
