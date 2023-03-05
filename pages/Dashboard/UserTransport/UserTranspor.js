@@ -9,10 +9,10 @@ const UserTranspor = ({ data }) => {
 
         <div class="flex justify-center">
             <div
-                class="flex flex-col rounded-lg bg-white shadow-lg dark:bg-neutral-700 w-[420px] h-[400px] justify-center items-center  md:w-[600px] md:h-[250px] lg:w-[600px] lg:h-[250px] md:flex-row ">
+                class="flex flex-col rounded-lg bg-white shadow-lg  w-[420px] h-[400px] justify-center items-center  md:w-[600px] md:h-[250px] lg:w-[600px] lg:h-[250px] md:flex-row ">
                 <Image
                     alt='/'
-                    className="flex-shrink-0 object-cover dark:border-transparent rounded outline-none  dark:bg-gray-500"
+                    className="flex-shrink-0 object-cover dark:border-transparent rounded outline-none "
                     src={data.img}
                     width={250}
                     height={200}
