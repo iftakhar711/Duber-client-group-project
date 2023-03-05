@@ -10,7 +10,7 @@ const Companies = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/all-transports")
+    fetch("http://localhost:5000/alltransport")
       .then(res => res.json())
       .then(data => {
         setCompanyInfo(data)
