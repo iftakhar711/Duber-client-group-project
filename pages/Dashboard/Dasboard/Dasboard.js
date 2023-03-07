@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MdDashboardCustomize } from "react-icons/md";
 import { DiProlog } from "react-icons/di";
 import { FaOpencart } from "react-icons/fa";
@@ -13,7 +12,17 @@ import Link from "next/link";
 
 const Dashboard = ({ children }) => {
     const [open, setOpen] = useState(true);
+    // const [dasuser, setDasuser] = useState();
 
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/passenger')
+    //         .then(res => res.json())
+    //         .then(data => dasuser(data[0].role))
+    // }, [dasuser])
+
+    // console.log(dasuser);
+
+    // console.log(dasuser?.email);
     return (
         <div className="lg:flex">
             <div
@@ -53,16 +62,19 @@ const Dashboard = ({ children }) => {
                     </li>
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <VscGitPullRequestCreate className=" w-5 h-5"></VscGitPullRequestCreate>
-                        <Link href='/dashboardComponents' className={`${!open && "hidden"} origin-left duration-200`}>
+                        <Link href='/DashboardComponents' className={`${!open && "hidden"} origin-left duration-200`}>
                             Company Req
                         </Link>
                     </li>
+
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <RxAvatar className=" w-5 h-5"></RxAvatar>
                         <Link href='/Dashboard/User/Users' className={`${!open && "hidden"} origin-left duration-200`}>
                             Passenger
                         </Link>
                     </li>
+
+
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <SiInstructables className=" w-5 h-5"></SiInstructables>
                         <Link href='/Dashboard/TransportCompany/TransportCompany' className={`${!open && "hidden"} origin-left duration-200`}>
