@@ -41,6 +41,7 @@ const EmailPass = () => {
           email,
           role
         };
+        console.log(person);
 
         fetch('http://localhost:5000/adduser', {
           method: "POST",
@@ -146,10 +147,7 @@ const EmailPass = () => {
               </>
               :
               <>
-                <p className="flex items-center gap-3">
-                  <TiTick className="bg-red-600 text-white rounded-full" />
-                  Has At least 8 characters?
-                </p>
+
               </>
           }
           {
@@ -162,10 +160,7 @@ const EmailPass = () => {
               </>
               :
               <>
-                <p className="flex items-center gap-3">
-                  <TiTick className="bg-red-600 text-white rounded-full" />
-                  Has one uppercase letter?
-                </p>
+
               </>
           }
           {
@@ -178,10 +173,7 @@ const EmailPass = () => {
               </>
               :
               <>
-                <p className="flex items-center gap-3">
-                  <TiTick className="bg-red-600 text-white rounded-full" />
-                  Has one digit?
-                </p>
+
               </>
           }
 
