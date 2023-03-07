@@ -51,7 +51,7 @@ const EmailPhone = () => {
               disabled={!email.length}
               onClick={handleNavigate}
               className={`${email.length ? "bg-gray-900 hover:bg-gray-900 hover:cursor-pointer text-white" : "bg-gray-100 text-gray-800 cursor-not-allowed"} px-4 py-2.5 rounded-full flex items-center justify-center gap-2 hover:bg-opacity-90 transition ease-in-out duration-500 `}
-              >
+            >
               <span>Next</span>
               <BiRightArrowAlt className="text-3xl" />
             </button>
