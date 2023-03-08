@@ -8,7 +8,8 @@ const initialState = {
     from: '',
     destination: '',
     cost: '',
-    numberPlate: ''
+    numberPlate: '',
+    approve: false,
 }
 
 const addTransport = createSlice({
