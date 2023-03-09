@@ -16,7 +16,7 @@ const Navigation = () => {
       <li className="mr-5 flex items-center">
         <Link
           className="hover:bg-[#333333] px-4 py-2 rounded-2xl duration-150"
-          href="/companies/companies"
+          href="/companies/Companies"
         >
           Company
         </Link>

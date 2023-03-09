@@ -1,9 +1,11 @@
-import { cost, destination, from, numberPlate, seatPlan, transport, transportImg, vehicleName } from "@/redux/slies/addTrnsportSlice";
+import { cost, destination, from, numberPlate, seatPlan, transport, transportImg, vehicleName, approve } from "@/redux/slies/addTrnsportSlice";
+import Image from "next/image";
 import React from "react";
+import { toast } from "react-hot-toast";
 import { useDispatch, useSelector } from "react-redux";
 import Dashboard from "../Dasboard/Dasboard";
 
-const SignupEmailDriveVehichleSelection = () => {
+const VehichleSelection = () => {
   const dispatch = useDispatch();
   const transportData = useSelector(state => state.addTransport)
 
@@ -31,17 +33,29 @@ const SignupEmailDriveVehichleSelection = () => {
           .then(res => res.json())
           .then(() => {
             form.reset();
+            toast.success('Added Succesfully')
           })
 
       })
-      .catch(error => console.log(error))
+      .catch(error => {
+        toast.error(error)
+        console.log(error)
+      })
   };
 
   return (
     <div className="md:w-[550px] w-full mx-auto">
       <div className="shadow-lg border p-3 rounded-md">
         <div>
-          <img src="https://i.ibb.co/hfhm6Jm/vehicle.png" alt="vehicle" />
+
+          <Image
+
+            width={550}
+            height={550}
+            src='https://i.ibb.co/hfhm6Jm/vehicle.png'
+            alt="Image"
+          />
+
         </div>
         <div>
           <h2 className="text-[24px] mb-4 mt-3 font-semibold">Enter your vehicle information</h2>
@@ -86,13 +100,13 @@ const SignupEmailDriveVehichleSelection = () => {
                 onChange={(e) => dispatch(seatPlan(e.target.value))}
                 className="w-full border py-2 px-3 focus:outline-none bg-gray-100 rounded-md" required>
                 <option value="">Select...</option>
-                <option value="2">52</option>
-                <option value="4">50</option>
-                <option value="10">48</option>
+                <option value="52">52</option>
+                <option value="50">50</option>
+                <option value="48">48</option>
                 <option value="14">14</option>
-                <option value="48">10</option>
-                <option value="50">04</option>
-                <option value="52">02</option>
+                <option value="10">10</option>
+                <option value="04">04</option>
+                <option value="02">02</option>
               </select>
             </div>
           </div>
@@ -149,6 +163,7 @@ const SignupEmailDriveVehichleSelection = () => {
     </div>
   );
 };
-SignupEmailDriveVehichleSelection.Layout = Dashboard
 
-export default SignupEmailDriveVehichleSelection;
+VehichleSelection.Layout = Dashboard
+
+export default VehichleSelection;

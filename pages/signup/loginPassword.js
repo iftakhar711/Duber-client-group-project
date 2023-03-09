@@ -4,6 +4,7 @@ import { Password } from "@/redux/slies/signupSlice";
 import { useRouter } from "next/router";
 import React, { useContext, useState } from "react";
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
+import { GiSkullCrossedBones } from "react-icons/gi";
 import { TiTick } from "react-icons/ti";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -116,7 +117,7 @@ const LoginPassword = () => {
                             :
                             <>
                                 <p className="flex items-center gap-3">
-                                    <TiTick className="bg-red-600 text-white rounded-full" />
+                                    <GiSkullCrossedBones className="bg-red-600 text-white rounded-full" />
                                     Has At least 8 characters?
                                 </p>
                             </>
@@ -132,7 +133,7 @@ const LoginPassword = () => {
                             :
                             <>
                                 <p className="flex items-center gap-3">
-                                    <TiTick className="bg-red-600 text-white rounded-full" />
+                                    <GiSkullCrossedBones className="bg-red-600 text-white rounded-full" />
                                     Has one uppercase letter?
                                 </p>
                             </>
@@ -148,7 +149,7 @@ const LoginPassword = () => {
                             :
                             <>
                                 <p className="flex items-center gap-3">
-                                    <TiTick className="bg-red-600 text-white rounded-full" />
+                                    <GiSkullCrossedBones className="bg-red-600 text-white rounded-full" />
                                     Has one digit?
                                 </p>
                             </>
