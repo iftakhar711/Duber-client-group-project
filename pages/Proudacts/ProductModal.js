@@ -1,13 +1,16 @@
 import { DuberContext } from '@/ContextProvider/ContextProvider';
+import { redirect } from 'next/dist/server/api-utils';
+import { useRouter } from 'next/router';
 import React, { useContext } from 'react';
 import { toast } from 'react-hot-toast';
 import { GiCrossMark } from 'react-icons/gi';
 
 
 const ProductModal = ({ visibel, onClose, data }) => {
+    const router = useRouter()
     const { user } = useContext(DuberContext);
-
     if (!visibel) return null
+
 
     const handleBooking = event => {
         event.preventDefault();
@@ -48,7 +51,7 @@ const ProductModal = ({ visibel, onClose, data }) => {
                 console.log(data);
                 if (data.acknowledged) {
                     toast.success('Booking confirmed');
-
+                    router.push('/')
                 }
                 else {
                     toast.error(data.message);

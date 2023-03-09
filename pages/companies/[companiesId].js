@@ -1,4 +1,5 @@
 import ContextProvider from '@/ContextProvider/ContextProvider';
+import Image from 'next/image';
 import React, { useContext, useState } from 'react';
 import { toast } from 'react-hot-toast';
 
@@ -45,7 +46,14 @@ const CompaniesDetails = () => {
             <section class="w-11/2 md:4/5 h-screen m-auto flex items-center">
                 <div class="w-full flex flex-col md:flex-row md:justify-between md:space-x-10 items-center">
                     <div class="relative">
-                        <img id="image" class="w-full h-full" src="/black-shirt.jpg" alt="" />
+
+                        <Image
+                            className="flex-shrink-0 object-cover md:w-40 md:h-40 w-full h-auto rounded outline-none "
+                            width={550}
+                            height={550}
+                            src=""
+                            alt="Image"
+                        />
                         <div class="arrows w-full absolute inset-y-1/2 flex justify-between px-3">
                             <button id="prev"><i class="fa-solid fa-chevron-left"></i></button>
                             <button id="next"><i class="fa-solid fa-chevron-right"></i></button>
@@ -74,7 +82,7 @@ const CompaniesDetails = () => {
             <div>
 
                 <h2>Review</h2>
-                <form onSubmit={handleSubmit}>
+                <form >
                     <textarea name="review" id="" className='w-full h-20 border'></textarea>
                     <button type="submit" className='px-6 py-2 bg-gray-800 hover:bg-gray-700 rounded-md text-white transition-all duration-500'>
                         {loading ? "Loading..." : "Add a Review"}

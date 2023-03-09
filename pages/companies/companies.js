@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect, useState } from 'react';
 import { BsArrowRight } from 'react-icons/bs';
@@ -25,7 +26,14 @@ const Companies = () => {
           {
             companyInfo.map((info, index) => <li key={index} className="flex flex-col py-6 sm:flex-row sm:justify-between">
               <div className="flex md:flex-row flex-col w-full space-x-2 sm:space-x-4">
-                <img className="flex-shrink-0 object-cover md:w-40 md:h-40 w-full h-auto rounded outline-none " src={info.image} alt="" />
+                <Image
+                  className="flex-shrink-0 object-cover md:w-40 md:h-40 w-full h-auto rounded outline-none "
+                  width={550}
+                  height={550}
+                  src={info.img}
+                  alt="Image"
+                />
+                {/* <img className="flex-shrink-0 object-cover md:w-40 md:h-40 w-full h-auto rounded outline-none " src={info.image} alt="" /> */}
                 <div className="flex flex-col justify-between w-full pb-4">
                   <div className="flex justify-between w-full pb-2 space-x-2">
                     <div className="space-y-1">

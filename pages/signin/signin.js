@@ -1,4 +1,5 @@
 import { Email } from "@/redux/slies/signupSlice";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useState } from "react";
@@ -47,21 +48,42 @@ const Signin = () => {
       <div className="my-2">
         <button
           className="bg-gray-200 hover:bg-gray-300 w-full py-3 px-4 rounded-lg transition ease-in-out duration-500 flex justify-center items-center gap-2">
-          <img className="w-6" src="https://i.ibb.co/CwFhq0J/google-2.png" alt="" />
+          {/* <img className="w-6" src="https://i.ibb.co/CwFhq0J/google-2.png" alt="" /> */}
+          <Image
+            className=' w-3 h-3'
+            width={6}
+            height={4}
+            src="https://i.ibb.co/CwFhq0J/google-2.png"
+            alt="Image"
+          />
           <span>Continue with Google</span>
         </button>
       </div>
       <div className="my-2">
         <button
           className="bg-gray-200 hover:bg-gray-300 w-full py-3 px-4 rounded-lg transition ease-in-out duration-500 flex justify-center items-center gap-2">
-          <img className="w-6" src="https://i.ibb.co/5Lsb0XW/apple-logo.png" alt="" />
+          {/* <img className="w-6" src="https://i.ibb.co/5Lsb0XW/apple-logo.png" alt="" /> */}
+          <Image
+            className=' w-3 h-3'
+            width={6}
+            height={4}
+            src="https://i.ibb.co/5Lsb0XW/apple-logo.png"
+            alt="Image"
+          />
           <span>Continue with Apple</span>
         </button>
       </div>
       <div className="my-2">
         <button
           className="bg-gray-200 hover:bg-gray-300 w-full py-3 px-4 rounded-lg transition ease-in-out duration-500 flex justify-center items-center gap-2">
-          <img className="w-6" src="https://i.ibb.co/VjDDTx7/facebook-1.png" alt="" />
+          {/* <img className="w-6" src="https://i.ibb.co/VjDDTx7/facebook-1.png" alt="" /> */}
+          <Image
+            className=' w-3 h-3'
+            width={10}
+            height={10}
+            src="https://i.ibb.co/VjDDTx7/facebook-1.png"
+            alt="Image"
+          />
           <span>Continue with Facebook</span>
         </button>
       </div>

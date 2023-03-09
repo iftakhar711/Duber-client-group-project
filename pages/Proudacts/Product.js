@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaMoneyBillAlt } from 'react-icons/fa';
 import { MdAirlineSeatReclineNormal } from 'react-icons/md';
@@ -11,16 +12,18 @@ const Product = ({ data }) => {
     const CloseModal = () => setShowModal(false)
 
     return (
+        data?.approve === true &&
         <div className="max-w-md  rounded-xl bg-white shadow-lg">
             <div className="p-8">
 
-                {/* <Image
+                <Image
+                    className=' w-[400px] h-[250px]'
                     width={400}
                     height={200}
                     src={data.img}
                     alt="Image"
-                /> */}
-                <img className=' w-96 h-56' src={data.img} alt="img" />
+                />
+                {/* <img className=' w-96 h-56' src={data.img} alt="img" /> */}
             </div>
 
             <div className="flex flex-col items-center gap-6 p-8">
@@ -50,8 +53,10 @@ const Product = ({ data }) => {
                 </div>
                 <button onClick={() => setShowModal(true)} className="mt-3 w-full rounded-lg bg-[#1c1470] p-3 text-xs lg:text-sm font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2"> Booking</button>
             </div>
+            {/* //modal */}
             <ProductModal onClose={CloseModal} data={data} visibel={showModal}></ProductModal>
         </div>
+
     );
 };
 
