@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 import { BiRightArrowAlt } from "react-icons/bi";
 
@@ -5,7 +6,14 @@ const SignupDriveLocation = () => {
   return (
     <div className="md:w-[550px] w-full mx-auto p-3 border shadow-lg rounded-md my-10 relative">
       <div className="">
-        <img className="w-[70px]" src="https://i.ibb.co/nLs6t63/dollar-bill.png" alt="" />
+        {/* <img className="w-[70px]" src="https://i.ibb.co/nLs6t63/dollar-bill.png" alt="" /> */}
+        <Image
+          className="w-[70px]"
+          height={0}
+          width={70}
+          src="https://i.ibb.co/nLs6t63/dollar-bill.png"
+          alt='image'
+        ></Image>
         <div>
           <h2 className="text-[36px] font-medium pt-4 pb-2">Earn with Uber</h2>
           <p className="text-[18px]">Decide when, where and how you want to earn.</p>

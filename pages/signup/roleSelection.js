@@ -1,14 +1,15 @@
-
+import React, { useState } from "react";
 import { Role } from "@/redux/slies/signupSlice";
 import { useRouter } from "next/router";
 import { BiLeftArrowAlt, BiRightArrowAlt } from "react-icons/bi";
 import { useDispatch } from "react-redux";
-import React, { useState } from "react";
 
-const roleSelection = () => {
-    const dispatch = useDispatch();
-    const router = useRouter()
+
+const RoleSelection = () => {
     const [roleSelection, setRoleSelection] = useState("")
+
+    const router = useRouter()
+    const dispatch = useDispatch();
 
     const handlePreview = (e) => {
         e.preventDefault()
@@ -79,4 +80,4 @@ const roleSelection = () => {
     );
 };
 
-export default roleSelection;
+export default RoleSelection;

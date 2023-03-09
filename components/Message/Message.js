@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import React from 'react';
 
 const Message = ({ own }) => {
@@ -12,8 +13,14 @@ const Message = ({ own }) => {
                 <div className=' flex'>
                     {
                         !own &&
-                        <img className=' h-9 w-9 rounded-full mr-3' src="https://i.ibb.co/bH9fpcR/photo-1633332755192-727a05c4013d.jpg" alt="" />
-
+                        // <img className=' h-9 w-9 rounded-full mr-3' src="https://i.ibb.co/bH9fpcR/photo-1633332755192-727a05c4013d.jpg" alt="" />
+                        <Image
+                            className=' h-9 w-9 rounded-full mr-3'
+                            height={36}
+                            width={36}
+                            src="https://i.ibb.co/bH9fpcR/photo-1633332755192-727a05c4013d.jpg"
+                            alt='image'
+                        ></Image>
                     }
 
 

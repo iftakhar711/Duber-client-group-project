@@ -55,7 +55,7 @@ const TransportCompany = () => {
                             </thead>
                             <tbody>
 
-                                {company?.map((com, i) => <Transportcom com={com} i={i}></Transportcom>)}
+                                {company?.map((com, i) => <Transportcom key={com._id} com={com} i={i}></Transportcom>)}
                             </tbody>
                         </table>
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const signupEmailDriveMethod = () => {
+const SignupEmailDriveMethod = () => {
   const [changeVehicle, setChangeVehicle] = useState("Delivery by car")
 
   return (
@@ -67,4 +67,4 @@ const signupEmailDriveMethod = () => {
   );
 };
 
-export default signupEmailDriveMethod;
+export default SignupEmailDriveMethod;

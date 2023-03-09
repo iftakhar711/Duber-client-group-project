@@ -33,7 +33,7 @@ const EmailOtpConf = () => {
           />
         </div>
         <div className="py-8">
-          <button className="py-2 px-4 font-medium rounded-full bg-gray-200 flex items-center justify-center hover:cursor-pointer hover:bg-gray-300 hover:bg-opacity-80 transition ease-in-out duration-500">I haven't received a code</button>
+          <button className="py-2 px-4 font-medium rounded-full bg-gray-200 flex items-center justify-center hover:cursor-pointer hover:bg-gray-300 hover:bg-opacity-80 transition ease-in-out duration-500">I haven not received a code</button>
         </div>
         <div className="flex justify-between items-center md:mt-12 mt-44">
           <div className="w-12 h-12 rounded-full bg-gray-200 flex items-center justify-center hover:cursor-pointer hover:bg-gray-300 hover:bg-opacity-80 transition ease-in-out duration-500 ">
