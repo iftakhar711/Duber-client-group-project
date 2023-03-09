@@ -1,12 +1,22 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Errorpage = () => {
+const Error = () => {
     return (
 
         <div class="relative h-screen overflow-hidden bg-indigo-200 ">
 
-            <img src="https://i.ibb.co/84Kd3vc/20602785-6325254.jpg" class="absolute object-cover w-full h-full" alt='/' />
+            {/* <img src="https://i.ibb.co/84Kd3vc/20602785-6325254.jpg" class="absolute object-cover w-full h-full" alt='/' /> */}
+            <Image
+                className="absolute object-cover w-full h-full"
+                height={100}
+                width={100}
+                src='https://i.ibb.co/84Kd3vc/20602785-6325254.jpg'
+                alt='image'
+            >
+
+            </Image>
             <div class="absolute inset-0 bg-black opacity-25">
             </div>
             <div class="container relative z-10 flex items-center px-6 py-32 mx-auto md:px-12 xl:py-40 ">
@@ -25,4 +35,4 @@ const Errorpage = () => {
     );
 };
 
-export default Errorpage;
+export default Error;

@@ -5,7 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
 import "../styles/globals.css";
-import Errorpage from "./Errorpage/Errorpage";
+
 
 export default function App({ Component, pageProps }) {
 
