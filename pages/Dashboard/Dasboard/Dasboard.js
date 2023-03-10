@@ -56,7 +56,7 @@ const Dashboard = ({ children }) => {
                     </li>
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <DiProlog className=" w-5 h-5"></DiProlog>
-                        <Link href='/Dashboard/AddTransport/VehichleSelection' className={`${!open && "hidden"} origin-left duration-200`}>
+                        <Link href='/Dashboard/AddTransport/vehichleSelection' className={`${!open && "hidden"} origin-left duration-200`}>
                             Add Transport
                         </Link>
                     </li>

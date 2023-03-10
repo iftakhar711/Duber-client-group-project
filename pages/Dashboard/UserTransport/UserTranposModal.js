@@ -6,7 +6,8 @@ import { AiFillMoneyCollect } from 'react-icons/ai';
 import { GiCrossMark } from 'react-icons/gi';
 
 const UserTranposModal = ({ visibel, onClose, data }) => {
-
+    const stripe = useStripe();
+    const elements = useElements();
 
     const [cardError, setCardError] = useState('');
     const [success, setSuccess] = useState('');
@@ -15,8 +16,7 @@ const UserTranposModal = ({ visibel, onClose, data }) => {
     const [clientSecret, setClientSecret] = useState("");
 
 
-    const stripe = useStripe();
-    const elements = useElements();
+
     const { cost, email, name, _id } = data;
 
     const router = useRouter()

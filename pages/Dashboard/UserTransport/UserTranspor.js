@@ -39,17 +39,17 @@ const UserTranspor = ({ data }) => {
                         height={200}
                     ></Image>
                     <div class="flex flex-col justify-start p-6 gap-y-4">
-                        <h3 className="text-lg font-bold leading-snug sm:pr-8 uppercase">{data.vehicle}</h3>
+                        <h3 className="text-lg font-bold leading-snug sm:pr-8 uppercase">{data?.vehicle}</h3>
                         {/* <p className=" text-slate-700 font-semibold capitalize">{data.transport}</p> */}
 
-                        <p className=" text-slate-700 font-semibold capitalize">From {data.from} | Destination {data.destination}</p>
+                        <p className=" text-slate-700 font-semibold capitalize">From {data?.from} | Destination {data?.destination}</p>
                         <span className='flex justify-between'>
-                            <p className=" text-sm">NP : {data.numberPlate}</p>
-                            <p className=" text-sm">Seat : {data.seatPlan}</p>
+                            <p className=" text-sm">NP : {data?.numberPlate}</p>
+                            <p className=" text-sm">Seat : {data?.seatPlan}</p>
                         </span>
                         <span className='flex justify-between'>
-                            <p className=" text-sm">Tel : {data.number}</p>
-                            <p className=" text-sm">Date : {data.date}</p>
+                            <p className=" text-sm">Tel : {data?.number}</p>
+                            <p className=" text-sm">Date : {data?.date}</p>
                         </span>
                         <span className='flex mx-auto '>
                             <span className='flex items-center gap-1'>
@@ -88,10 +88,11 @@ const UserTranspor = ({ data }) => {
                     </div>
                 </div>
             </div>
-            <Elements stripe={stripePromise}>
-                <UserTranposModal onClose={CloseModal} data={data} visibel={showModal}></UserTranposModal>
-            </Elements>
-
+            <>
+                <Elements stripe={stripePromise}>
+                    <UserTranposModal onClose={CloseModal} data={data} visibel={showModal}></UserTranposModal>
+                </Elements>
+            </>
         </>
     );
 };
