@@ -7,7 +7,7 @@ const Users = () => {
 	const [users, setUsers] = useState();
 
 	useEffect(() => {
-		fetch('http://localhost:5000/passenger')
+		fetch('https://duber-group-project-server.vercel.app/passenger')
 			.then(res => res.json())
 			.then(data => setUsers(data))
 	}, [])

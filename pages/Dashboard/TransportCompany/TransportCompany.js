@@ -8,7 +8,7 @@ const TransportCompany = () => {
     const [company, setCompany] = useState();
 
     useEffect(() => {
-        fetch('http://localhost:5000/company')
+        fetch('https://duber-group-project-server.vercel.app/company')
             .then(res => res.json())
             .then(data => setCompany(data))
     }, [])

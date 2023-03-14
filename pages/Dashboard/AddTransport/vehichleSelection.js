@@ -23,7 +23,7 @@ const VehichleSelection = () => {
       .then(res => res.json())
       .then(data => {
         dispatch(transportImg(data.data.url));
-        fetch('http://localhost:5000/addtransport', {
+        fetch('https://duber-group-project-server.vercel.app/addtransport', {
           method: 'POST',
           headers: {
             'content-type': 'application/json'

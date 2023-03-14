@@ -5,7 +5,7 @@ import { useQuery } from '@tanstack/react-query';
 import { DuberContext } from '@/ContextProvider/ContextProvider';
 const UserTransport = () => {
     const { user } = useContext(DuberContext);
-    const url = `http://localhost:5000/bookings/${user?.email}`
+    const url = `https://duber-group-project-server.vercel.app/bookings/${user?.email}`
     const { data: transport = [] } = useQuery({
         queryKey: ['transport', user?.email],
         queryFn: async () => {

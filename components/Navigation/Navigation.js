@@ -62,7 +62,7 @@ const Navigation = () => {
           {
             user?.uid ?
               <>
-                <Link className="lg:mr-5 mr-2" href='/Dashboard/Dasboard/Dasboard'>Dashboard</Link>
+                <Link className="lg:mr-5 mr-2" href='/Dashboard/UserTransport'>Dashboard</Link>
                 < button onClick={() => userLogout()} className="lg:mr-5 mr-2 text-[16px] hover:bg-[#333333] px-4 py-2 rounded-2xl duration-150">
                   Logout
                 </button>

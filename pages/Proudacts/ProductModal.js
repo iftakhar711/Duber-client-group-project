@@ -39,7 +39,7 @@ const ProductModal = ({ visibel, onClose, data }) => {
             numberPlate
         }
 
-        fetch('http://localhost:5000/bookings', {
+        fetch('https://duber-group-project-server.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

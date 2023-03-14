@@ -15,7 +15,7 @@ const Dashboard = ({ children }) => {
     // const [dasuser, setDasuser] = useState();
 
     // useEffect(() => {
-    //     fetch('http://localhost:5000/passenger')
+    //     fetch('https://duber-group-project-server.vercel.app/passenger')
     //         .then(res => res.json())
     //         .then(data => dasuser(data[0].role))
     // }, [dasuser])
@@ -50,7 +50,7 @@ const Dashboard = ({ children }) => {
 
                     <li className="flex  rounded-md p-2 cursor-pointer hover:bg-light-white text-sm items-center gap-x-3 text-black">
                         <FaOpencart className=" w-5 h-5"></FaOpencart>
-                        <Link href='/Dashboard/UserTransport/UserTransport' className={`${!open && "hidden"} origin-left duration-200`}>
+                        <Link href='/Dashboard/UserTransport' className={`${!open && "hidden"} origin-left duration-200`}>
                             Transport
                         </Link>
                     </li>

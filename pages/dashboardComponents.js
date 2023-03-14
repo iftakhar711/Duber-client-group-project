@@ -12,13 +12,13 @@ const DashboardComponents = () => {
     const [dashboardInfo, setDashboardInfo] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5000/alltransport")
+        fetch("https://duber-group-project-server.vercel.app/alltransport")
             .then(res => res.json())
             .then(data => {
                 setDashboardInfo(data)
             })
     }, [])
-    // const url = 'http://localhost:5000/alltransport'
+    // const url = 'https://duber-group-project-server.vercel.app/alltransport'
     // const { data: dashboardInfo = [] } = useQuery({
     //     queryKey: ['dashboardInfo',],
     //     queryFn: async () => {
@@ -30,7 +30,7 @@ const DashboardComponents = () => {
     // console.log(dashboardInfo[5].approve);
 
     const handelMakeTrue = (id) => {
-        fetch(`http://localhost:5000/alltransport/${id}`, {
+        fetch(`https://duber-group-project-server.vercel.app/alltransport/${id}`, {
             method: 'put',
             headers: {
                 'content-type': 'application/json'

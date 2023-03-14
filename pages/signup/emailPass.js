@@ -43,7 +43,7 @@ const EmailPass = () => {
         };
         console.log(person);
 
-        fetch('http://localhost:5000/adduser', {
+        fetch('https://duber-group-project-server.vercel.app/adduser', {
           method: "POST",
           headers: {
             'content-type': 'application/json'

@@ -19,7 +19,7 @@ const CompaniesDetails = () => {
     //         data
     //     }
 
-    //     fetch("http://localhost:5000/add-review", {
+    //     fetch("https://duber-group-project-server.vercel.app/add-review", {
     //         method: "POST",
     //         headers: {
     //             "content-type": "application/json"

@@ -1,11 +1,12 @@
 // import { useQuery } from '@tanstack/react-query';
-import { Elements } from '@stripe/react-stripe-js';
+
 import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FaMoneyBillAlt } from 'react-icons/fa';
 import { MdPayment } from 'react-icons/md';
-import UserTranposModal from './UserTranposModal';
+import UserTranposModal from './[UserTranposModal]';
 
 
 const stripePromise = loadStripe('pk_test_51MjbvlJh8SD3yhSqWP9QD6XKfMxg8eoHzAa45s9r5tz52UYI38iTq6FcbtyM4Mky3z0K4xqTfsbEHGShRG2F6S6Y00EnI3XNjj');
@@ -13,7 +14,7 @@ const stripePromise = loadStripe('pk_test_51MjbvlJh8SD3yhSqWP9QD6XKfMxg8eoHzAa45
 const UserTranspor = ({ data }) => {
 
     // const handleDeleteRide = id => {
-    //     fetch(`http://localhost:5000/bookings/${id}`, {
+    //     fetch(`https://duber-group-project-server.vercel.app/bookings/${id}`, {
     //         method: 'DELETE',
     //     })
     //         .then(res => res.json())
@@ -22,7 +23,8 @@ const UserTranspor = ({ data }) => {
     //             refetch()
     //         })
     // }
-
+    // const stripe = useStripe();
+    // const elements = useElements();
     const [showModal, setShowModal] = useState(false)
     const CloseModal = () => setShowModal(false)
 
@@ -39,7 +41,7 @@ const UserTranspor = ({ data }) => {
                         height={200}
                     ></Image>
                     <div class="flex flex-col justify-start p-6 gap-y-4">
-                        <h3 className="text-lg font-bold leading-snug sm:pr-8 uppercase">{data?.vehicle}</h3>
+                        <h3 className="text-lg font-bold leading-snug sm:pr-8 uppercase">{data?.vehicleName}</h3>
                         {/* <p className=" text-slate-700 font-semibold capitalize">{data.transport}</p> */}
 
                         <p className=" text-slate-700 font-semibold capitalize">From {data?.from} | Destination {data?.destination}</p>
@@ -89,9 +91,13 @@ const UserTranspor = ({ data }) => {
                 </div>
             </div>
             <>
-                <Elements stripe={stripePromise}>
+
+                {/* <Elements  >
                     <UserTranposModal onClose={CloseModal} data={data} visibel={showModal}></UserTranposModal>
-                </Elements>
+                </Elements> */}
+                <Elements stripe={stripePromise}><UserTranposModal onClose={CloseModal} data={data} visibel={showModal}></UserTranposModal></Elements>
+
+
             </>
         </>
     );

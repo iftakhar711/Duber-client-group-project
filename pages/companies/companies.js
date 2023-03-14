@@ -11,7 +11,7 @@ const Companies = () => {
 
 
   useEffect(() => {
-    fetch("http://localhost:5000/alltransport")
+    fetch("https://duber-group-project-server.vercel.app/alltransport")
       .then(res => res.json())
       .then(data => {
         setCompanyInfo(data)
