@@ -62,7 +62,7 @@ const UserTranspor = ({ data }) => {
                         </span>
 
 
-                        {data.cost && !data.paid &&
+                        {/* {data?.cost && !data?.paid &&
 
                             <button className=" w-full rounded-lg bg-[#3c3777] p-2 font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2">
                                 <span onClick={() => setShowModal(true)} className=' flex justify-center items-center gap-1'>
@@ -72,7 +72,7 @@ const UserTranspor = ({ data }) => {
                             </button>
                         }
                         {
-                            data.cost && data.paid &&
+                            data?.cost && data?.paid &&
 
                             <button disabled className=" w-full rounded-lg bg-[#3c3777] p-2 font-semibold text-white shadow-xl shadow-blue-700/30 outline-none transition-transform hover:scale-105 hover:bg-[#332c84] focus:scale-105 focus:bg-blue-600 focus:ring-2">
                                 <span className=' flex justify-center items-center gap-1'>
@@ -80,7 +80,7 @@ const UserTranspor = ({ data }) => {
                                     Paid
                                 </span>
                             </button>
-                        }
+                        } */}
 
                         {/* payment modal */}
 
